@@ -41,6 +41,7 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },    /* first entry is default */
 	/* { "><>",      NULL }, /* TW: I never want this as a layout */ /* no layout function means floating behavior */ 
 	{ "[M]",      monocle },
+	{ "[D=",      deck },
   { NULL,       NUll}, /* TW: manual insert, must be last in the array for cyclelayouts to work
 };
 
@@ -79,6 +80,8 @@ static Key keys[] = {
 	/* { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} }, */
 	/* { MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} }, */
 	/* { MODKEY,                       XK_space,  setlayout,      {0} }, */
+	{ MODKEY,                       XK_h,  cyclelayout,       {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_h,  togglermaster, {0} },
 	{ MODKEY|ShiftMask,             XK_v,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
