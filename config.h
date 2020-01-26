@@ -40,11 +40,11 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
+	{ "=[]",      tile },    /* first entry is default */
 	/* { "><>",      NULL }, /* TW: I never want this as a layout */ /* no layout function means floating behavior */ 
 	{ "[M]",      monocle },
-	/* { "[D=",      deck }, */
-  { "NULL",       NUll}, /* TW: manual insert, must be last in the array for cyclelayouts to work*/
+	{ "=D]",      deck },
+  { "NULL",       NULL}, /* TW: manual insert, must be last in the array for cyclelayouts to work*/
 };
 
 /* key definitions */
