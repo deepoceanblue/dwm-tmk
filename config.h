@@ -82,8 +82,8 @@ static Key keys[] = {
 	/* { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } }, */
 	{ MODKEY,                       XK_minus,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_equal,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_z,      setmfact,       {.f = +0.05} },
-	{ MODKEY|ShiftMask,             XK_z,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_z,      setmfact,       {.f = -0.05} }, /*+-switched because of rmaster*/
+	{ MODKEY|ShiftMask,             XK_z,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_l, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
