@@ -24,7 +24,3 @@ The structure is:
  MERGE branches are often changed, reset or discarded.
  
 The commit message should always indicate instances of manual application/conflic resolution.
-
-## License
-
-CC0 Universal, see LICENSE.md
