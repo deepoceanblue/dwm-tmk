@@ -9,7 +9,7 @@ The structure is:
 
 - master: for now keep pristine, as a reference for new branches
 
-- <patchname>: each patch has its own branch and is applied at clean copy of master. 
+- \<patchname>: each patch has its own branch and is applied at clean copy of master. 
 Once patch is applied, and corrections are made, it should not be changed.
  
 - config-changes: patches are very inconsistent if/where to auto-apply changes to keybindings, const etc. (config.def.h, config.h, nowhere). 
