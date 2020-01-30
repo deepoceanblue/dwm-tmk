@@ -1,48 +1,30 @@
-dwm - dynamic window manager
-============================
-dwm is an extremely fast, small, and dynamic window manager for X.
+# DWM-TMK
 
+My fork of dwm by (suckless.org)[dwm.suckless.org].
 
-Requirements
-------------
-In order to build dwm you need the Xlib header files.
+Here I experiment with different patch combinations and settings.
+Subject to constant change.
 
+The structure is:
 
-Installation
-------------
-Edit config.mk to match your local setup (dwm is installed into
-the /usr/local namespace by default).
+- master
+:for now keep pristine, as a reference for new branches
 
-Afterwards enter the following command to build and install dwm (if
-necessary as root):
+- <patchname>
+:each patch has its own branch and is applied at clean copy of master.
+ Once patch is applied, and corrections are made, it should not be changed.
+ 
+- config-changes
+:patches are very inconsistent if/where to auto-apply changes to keybindings, const etc. (config.def.h, config.h, nowhere)
+ This branch is dedicated to keep track of all such changes, and to make sure these are propagated to my config.h.  
 
-    make clean install
+- MERGE[0-9][0-9]
+:here merging of different patch combination happens.
+ There might be more than one MERGE branch at a time, each for different patch combination.
+ MERGE branches are often changed, reset or discarded.
+ 
+The commit message should always indicate instances of manual application/conflic resolution.
 
+## License
 
-Running dwm
------------
-Add the following line to your .xinitrc to start dwm using startx:
-
-    exec dwm
-
-In order to connect dwm to a specific display, make sure that
-the DISPLAY environment variable is set correctly, e.g.:
-
-    DISPLAY=foo.bar:1 exec dwm
-
-(This will start dwm on display :1 of the host foo.bar.)
-
-In order to display status info in the bar, you can do something
-like this in your .xinitrc:
-
-    while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
-    do
-    	sleep 1
-    done &
-    exec dwm
-
-
-Configuration
--------------
-The configuration of dwm is done by creating a custom config.h
-and (re)compiling the source code.
+CC0 Universal, see LICENSE.md
