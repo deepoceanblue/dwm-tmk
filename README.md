@@ -19,4 +19,4 @@ This branch is dedicated to keep track of all such changes, and to make sure the
  There might be more than one MERGE branch at a time, each for different patch combination.
  MERGE branches are often changed, reset or discarded.
  
-The commit message should always indicate instances of manual application/conflic resolution.
+The commit message should always indicate instances of manual application/conflict resolution.
